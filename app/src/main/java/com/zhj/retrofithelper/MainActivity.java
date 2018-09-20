@@ -8,11 +8,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.zhj.retrofithelper.api.ApiService;
-import com.zhj.retrofithelper.api.RetrofitManager;
-import com.zhj.retrofithelper.api.callback.RxResponseCallBack;
-import com.zhj.retrofithelper.api.param.ParamsMap;
-import com.zhj.retrofithelper.api.rx.RxHelper;
+import com.zhj.retrofithelper.retrofit.ApiService;
+import com.zhj.retrofithelper.retrofit.RetrofitManager;
+import com.zhj.retrofithelper.retrofit.callback.RxResponseCallBack;
+import com.zhj.retrofithelper.retrofit.param.ParamsMap;
+import com.zhj.retrofithelper.retrofit.rx.RxHelper;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
