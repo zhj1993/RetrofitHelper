@@ -1,10 +1,10 @@
 # RetrofitHelper
 retrofit 简单封装 实现公共参数get和post统一处理,上传和下载带进度显示,图片和本文一起提交
 
-1.普通请求
+### 1.普通请求
 
-
-RxHelper.post(RetrofitManager.create(ApiService.class)
+ ```Java
+ RxHelper.post(RetrofitManager.create(ApiService.class)
                         .getBookDetail(ParamsMap.create().put("bid", "b11192852").put("qqq", "111").build())
                 , new RxResponseCallBack() {
                     @Override
@@ -16,11 +16,12 @@ RxHelper.post(RetrofitManager.create(ApiService.class)
                     public void onError(int code, String msg) {
                     }
                 });
+ ```
                 
-2.图片和参数一起提交
+### 2.图片和参数一起提交
 
-
-RxHelper.post(RetrofitManager
+ ```Java
+ RxHelper.post(RetrofitManager
                 .create(ApiService.class)
                 .postImage(ParamsMap.buildImageFiles(files, new RxResponseCallBack() {
                     @Override
@@ -36,11 +37,12 @@ RxHelper.post(RetrofitManager
                 Log.d("image", "json----->" + o);
             }
         });
+  ```
    
- 3.下载文件 进度更新在FileResponseBody 可以使用Eventbus发送消息更新 具体可以查阅代码
+ ### 3.下载文件 进度更新在FileResponseBody 可以使用Eventbus发送消息更新 具体可以查阅代码
   
-  
-  RxHelper.download(RetrofitManager.create(ApiService.class)
+ ```Java
+ RxHelper.download(RetrofitManager.create(ApiService.class)
                 .download(url), new RxResponseCallBack() {
             @Override
             public void onSuccess(Object file) {
@@ -51,5 +53,6 @@ RxHelper.post(RetrofitManager
                 Log.d("","下载失败");
             }
         });
+  ```
         
    只是简单封装，由于项目要更换网络框架所以分享出来了，部分借鉴了githup上的代码
