@@ -2,6 +2,8 @@
 retrofit 简单封装 实现公共参数get和post统一处理,上传和下载带进度显示,图片和本文一起提交
 
 1.普通请求
+
+
 RxHelper.post(RetrofitManager.create(ApiService.class)
                         .getBookDetail(ParamsMap.create().put("bid", "b11192852").put("qqq", "111").build())
                 , new RxResponseCallBack() {
@@ -16,6 +18,8 @@ RxHelper.post(RetrofitManager.create(ApiService.class)
                 });
                 
 2.图片和参数一起提交
+
+
 RxHelper.post(RetrofitManager
                 .create(ApiService.class)
                 .postImage(ParamsMap.buildImageFiles(files, new RxResponseCallBack() {
@@ -34,6 +38,8 @@ RxHelper.post(RetrofitManager
         });
    
  3.下载文件 进度更新在FileResponseBody 可以使用Eventbus发送消息更新 具体可以查阅代码
+  
+  
   RxHelper.download(RetrofitManager.create(ApiService.class)
                 .download(url), new RxResponseCallBack() {
             @Override
