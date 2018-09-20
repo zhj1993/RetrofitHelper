@@ -10,7 +10,6 @@ RxHelper.post(RetrofitManager.create(ApiService.class)
                         String json = (String) o;
                         Log.d("json", json);
                     }
-
                     @Override
                     public void onError(int code, String msg) {
                     }
@@ -41,7 +40,6 @@ RxHelper.post(RetrofitManager
             public void onSuccess(Object file) {
              Log.d("","下载成功");
             }
-
             @Override
             public void onError(int code, String msg) {
                 Log.d("","下载失败");
