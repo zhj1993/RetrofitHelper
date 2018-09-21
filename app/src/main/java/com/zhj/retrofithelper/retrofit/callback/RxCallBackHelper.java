@@ -7,7 +7,7 @@ package com.zhj.retrofithelper.retrofit.callback;
  * 时间: 2018/9/19
  */
 
-public class RetrofitHelper {
+public class RxCallBackHelper {
 
 
     private long mTotal;//上传文件总大小
@@ -20,7 +20,7 @@ public class RetrofitHelper {
         this.rxResponseCallBack = rxResponseCallBack;
     }
 
-    public RetrofitHelper setTotal(long total) {
+    public RxCallBackHelper setTotal(long total) {
         this.mTotal = total;
         return this;
     }

@@ -4,7 +4,7 @@ import android.text.TextUtils;
 
 import com.zhj.retrofithelper.retrofit.body.FileRequestBody;
 import com.zhj.retrofithelper.retrofit.callback.RxResponseCallBack;
-import com.zhj.retrofithelper.retrofit.callback.RetrofitHelper;
+import com.zhj.retrofithelper.retrofit.callback.RxCallBackHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -150,7 +150,7 @@ public class ParamsMap {
         if (files == null) {
             files = new ArrayList<>();
         }
-        RetrofitHelper uploadHelper = new RetrofitHelper();
+        RxCallBackHelper uploadHelper = new RxCallBackHelper();
         long total = 0;//文件总大小
         List<MultipartBody.Part> parts = new ArrayList<>(files.size());
         for (File file : files) {//遍历构建图片上传参数
