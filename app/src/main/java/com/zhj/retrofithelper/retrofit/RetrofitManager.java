@@ -16,7 +16,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * 介绍: (这里用一句话描述这个类的作用)
+ * 介绍: (RetrofitManager)
  * 作者: zhahaijun
  * 邮箱: zhahaijun@bearead.cn
  * 时间: 2018/9/10
@@ -96,5 +96,4 @@ public class RetrofitManager {
     public static <T> T create(Class<T> clazz, String url) {
         return createRetrofit(url).create(clazz);
     }
-
 }
